@@ -1,0 +1,21 @@
+name: Copy GQL schema
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - uses: andstor/copycat-action@v3
+      with:
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        src_path: /schema.gql
+        dst_path: /app/gql/
+        dst_owner: mansona
+        dst_repo_name: test-copy-file-dest
