@@ -16,6 +16,7 @@ jobs:
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         src_path: /schema.gql
+        src_branch: main
         dst_path: /app/gql/
         dst_owner: mansona
         dst_repo_name: test-copy-file-dest
