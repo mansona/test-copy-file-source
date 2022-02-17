@@ -1,0 +1,20 @@
+{
+  "name": "source-repo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mansona/test-copy-file-source.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mansona/test-copy-file-source/issues"
+  },
+  "homepage": "https://github.com/mansona/test-copy-file-source#readme"
+}
