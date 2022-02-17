@@ -19,3 +19,12 @@ jobs:
         dst_path: /app/gql/
         dst_owner: mansona
         dst_repo_name: test-copy-file-dest
+        dst_branch: update-schema-${{env.GITHUB_REF}}
+    - name: pull-request
+      uses: m4heshd/pull-request@third-party-repos
+      with:
+        source_branch: update-schema-${{env.GITHUB_REF}}
+        destination_branch: "main"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        pr_title: "⬆️ Update GraphQL schema to match Facade ${{ github.ref }}"
+        pr_label: "auto-pr"
