@@ -28,6 +28,6 @@ jobs:
         source_branch: update-schema-${{github.ref}}
         destination_branch: "main"
         destination_repository: "mansona/test-copy-file-dest"
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.PERSONAL_TOKEN }}
         pr_title: "⬆️ Update GraphQL schema to match Facade ${{ github.ref }}"
         pr_label: "auto-pr"
